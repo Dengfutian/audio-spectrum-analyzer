@@ -14,6 +14,8 @@ An interactive signal-processing application that analyses an audio clip and vis
 
 The project was built as an engineering portfolio piece to demonstrate how a continuous real-world signal (sound) is converted into discrete data, how the Fast Fourier Transform reveals its frequency content, and how a simple interpolation step improves measurement resolution beyond the raw FFT grid.
 
+**Live demo:** not deployed yet. A hosted Gradio instance is planned on Hugging Face Spaces, and the link will be added here once it is available. See [Deploying a shareable demo](#deploying-a-shareable-demo).
+
 ## Table of contents
 
 - [Motivation](#motivation)
@@ -29,6 +31,8 @@ The project was built as an engineering portfolio piece to demonstrate how a con
 - [Deploying a shareable demo](#deploying-a-shareable-demo)
 - [Limitations](#limitations)
 - [Possible future work](#possible-future-work)
+- [Related projects](#related-projects)
+- [License](#license)
 
 ## Motivation
 
@@ -86,6 +90,7 @@ audio-spectrum-analyzer/
 ├── app.py                                 # Gradio UI + DSP pipeline
 ├── requirements.txt                       # Python dependencies
 ├── README.md                              # This document
+├── LICENSE                                # MIT License
 ├── .gitignore                             # Files excluded from version control
 ├── examples/
 │   └── A4_440Hz_reference_tone.wav        # 3.0 s, mono, 16-bit, 44 100 Hz reference tone
@@ -227,3 +232,19 @@ Before making anything public, re-read the [Limitations](#limitations) section a
 - Configurable block size so users can see the resolution/accuracy trade-off directly
 - Peak-picking for multiple simultaneous notes
 - A live-streaming mode using `gradio`'s streaming audio input
+
+## Related projects
+
+This repository is part of a small portfolio of Python engineering projects:
+
+| Project | Description |
+| --- | --- |
+| [career](https://github.com/Dengfutian/career) | Embodied-AI / robotics job-market analysis & visualization: 51job CSV → SQLite → FastAPI analytics → ECharts dashboard |
+| [jobcrawler](https://github.com/Dengfutian/jobcrawler) | 51job Selenium crawler: multi-keyword, multi-city, resumable, anti-detection, CSV output |
+| [face-search](https://github.com/Dengfutian/face-search) | Classroom face recognition & photo-face detection service (InsightFace / ONNX Runtime / Faiss) |
+
+Together they cover one pipeline end to end: **data collection → data analysis → applied AI → low-level signal processing**.
+
+## License
+
+Released under the MIT License — see [LICENSE](LICENSE).
